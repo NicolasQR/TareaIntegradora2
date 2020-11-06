@@ -41,4 +41,12 @@ public class RestrictedPlaylist extends Playlist{
 		this.users = users;
 	}
 	
+	/* Description This method overrides the toString of this class
+		 * @return The information of the PublicPlayList with the format of the superclass and adding the users 
+		 */
+	public String toSting(){
+		return super.toString()+
+				"\n**  Users: "+getUsers().substring(0, getUsers().length()-2)+
+				"\n***************************************";
+	}
 }

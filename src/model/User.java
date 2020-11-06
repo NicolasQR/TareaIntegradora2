@@ -98,4 +98,35 @@ public class User {
 		updateCategory();
 	}
 	
+	/*
+	 * Description This methos update the categroy of the user
+	 */
+	public void updateCategory() {
+		switch (contribution) {
+		case 3:
+			category = Category.littleContributor;
+			break;
+			
+		case 10:
+			category = Category.mildContributor;
+			break;
+			
+		case 30:
+			category = Category.starContributor;
+		}
+	}
+	
+	/*
+	 * Description This method overwrites the class toString
+	 * @return All user information 
+	 */
+	public String toString() {
+		return "*************  User **************"+
+				"\n**  UserName: "+userName+
+				"\n**  Age: "+age+
+				"\n**  Category: "+category+
+				"\n***********************************";
+
+	}
+	
 }

@@ -76,4 +76,73 @@ public class Song {
 	public String getDuration() {
 		return duration;
 	}
+	
+	/*
+	 * Description This method sets song duration
+	 * @param mins, song minutes
+	 * @param secs, song seconds
+	 */
+	public void setDuration(int mins, int secs) {
+		int minsT = mins;
+		int secsT = secs;
+		
+		if (secsT > 60) {
+			minsT++;
+			secsT = secsT - 60;
+		}
+		
+		setMins(minsT);
+		setSecs(secsT);
+		
+		this.duration = ""+minsT+":"+secsT;
+	}	
+	
+	/*
+	 * Description This method gets song minutes
+	 * @return minutes of the song
+	 */
+	public int getMins() {
+		return mins;
+	}
+
+	public void setMins(int mins) {
+		this.mins = mins;
+	}
+	
+	/*
+	 * Description This method gets song seconds
+	 * @return seconds of the song
+	 */
+	public int getSecs() {
+		return secs;
+	}
+
+	public void setSecs(int secs) {
+		this.secs = secs;
+	}
+	
+	/*
+	 * Description This method gets song genre
+	 * @return genre of the song
+	 */
+	public Genre getGenre() {
+		return genre;
+	}
+
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
+	
+	/*
+	 * Description This method overwrites the class toString
+	 * @return All user information 
+	 */
+	public String toString() {
+		return "\n**************  Song **************"+
+				"\n**  Title: "+title+
+				"\n**  Artist: "+artist+
+				"\n**  Duration: "+duration+
+				"\n**  Genre: "+genre+ 
+				"\n***********************************";
+	}
 }
