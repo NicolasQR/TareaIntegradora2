@@ -31,4 +31,14 @@ public class PublicPlaylist extends Playlist{
 		generalGrades += grade;
 		this.grade = generalGrades/quantityOfGrades;
 	}
+	
+	/*
+	 * Description This method overrides the toString of this class
+	 * @return The information of the PublicPlayList with the format of the superclass and adding the grades 
+	 */
+	public String toSting(){
+		return super.toString()+
+				"\n**  Grade: "+grade+
+				"\n***************************************";
+	}
 }

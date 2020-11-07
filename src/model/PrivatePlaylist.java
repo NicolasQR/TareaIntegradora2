@@ -31,4 +31,13 @@ public class PrivatePlaylist extends Playlist{
 		this.uniqueUser = uniqueUser;
 	}
 	
+	/* Description This method overrides the toString of this class
+	 * @return The information of the PublicPlayList with the format of the superclass and adding the uniqueUser 
+	 */
+	public String toSting(){
+		return super.toString()+
+				"\n**  User: "+uniqueUser.getUserName()+
+				"\n***************************************";
+	}
+	
 }
